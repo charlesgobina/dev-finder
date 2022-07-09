@@ -1,0 +1,31 @@
+div.titleBar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.titleBar > h1 {
+  font-size: 1.8em;
+}
+
+.themeSwitch {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.themeSwitch > p {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.themeSwitch > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
