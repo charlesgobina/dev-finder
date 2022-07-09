@@ -1,7 +1,8 @@
 import React from 'react';
+import Finder from './pages/Finder';
 
 const App = () => (
-  <div>App</div>
+  <Finder />
 );
 
 export default App;

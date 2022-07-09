@@ -1,0 +1,9 @@
+.userSearch {
+  width: 100%;
+  margin: 10px 30px;
+  background: #1f2a48;
+}
+
+.userSearch > input {
+  width: 70%;
+}
