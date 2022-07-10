@@ -54,7 +54,10 @@
   gap: 10px;
 }
 
-.userLocation, .userBlog, .userTwitter, .userOrg {
+.userLocation,
+.userBlog,
+.userTwitter,
+.userOrg {
   display: inherit;
   align-items: center;
   gap: 5px;
