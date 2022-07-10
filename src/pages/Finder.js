@@ -6,7 +6,7 @@ import './Finder.css';
 const Finder = () => (
   <main className="devFinder">
     <TitleBar />
-    <SearchUsername />
+    <SearchUsername className="searchUsername" />
     <div>Finder</div>
   </main>
 );
