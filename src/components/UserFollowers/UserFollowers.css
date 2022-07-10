@@ -1,0 +1,29 @@
+.userFollowerTable {
+  background: #141c2f;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.userFollowerTable > .followerTable {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.userFollowerTable > .followerTable > thead {
+  text-align: center;
+  width: 33.3%;
+  font-size: 0.93em;
+}
+
+.userFollowerTable > .followerTable > tbody {
+  text-align: center;
+}
+
+.tableBodyInfo {
+  height: 50px;
+}
+
+.tableBodyInfo > td {
+  font-weight: bolder;
+  font-size: larger;
+}

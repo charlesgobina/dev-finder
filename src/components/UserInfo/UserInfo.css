@@ -1,3 +1,64 @@
-div {
-  color: red;
+.userInfoWrapper {
+  padding: 10px 15px;
+  font-size: 1.2em;
+}
+
+.userGeneralInfo {
+  display: flex;
+  flex-direction: column;
+  background: #1f2a48;
+  border-radius: 10px;
+  padding: 15px 20px;
+  gap: 30px;
+}
+
+.userGeneralInfo > .userParticularInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.userGeneralInfo > .userParticularInfo > .userDescription {
+  line-height: 25px;
+  text-align: left;
+}
+
+.userParticularInfo > .userPersonalInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.userParticularInfo > .userPersonalInfo > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.userParticularInfo > .userPersonalInfo > .userNameInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.userParticularInfo > .userPersonalInfo > .userNameInfo > .userHandle {
+  color: #2276e7;
+}
+
+.userGeneralInfo > .userSocials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userLocation,
+.userBlog,
+.userTwitter,
+.userOrg {
+  display: inherit;
+  align-items: center;
+  gap: 5px;
 }

@@ -3,22 +3,22 @@ div.titleBar {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 15px;
 }
 
 .titleBar > h1 {
-  font-size: 1.8em;
+  font-size: 1.9em;
 }
 
 .themeSwitch {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: 10px;
 }
 
 .themeSwitch > p {
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.1em;
   letter-spacing: 2px;
   font-weight: 600;
 }
