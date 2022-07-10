@@ -5,4 +5,9 @@ main {
   justify-content: center;
   background-color: #141c2f;
   color: #fff;
+  gap: 20px;
+}
+
+.searchUsername {
+  padding: 0 30px;
 }
