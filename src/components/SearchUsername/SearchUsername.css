@@ -5,7 +5,7 @@
 
 .userSearch {
   display: grid;
-  grid-template-columns: 10% 65% 25%;
+  grid-template-columns: 10% 90%;
   align-items: center;
   width: 100%;
   padding: 15px 10px;
@@ -13,7 +13,13 @@
   border-radius: 10px;
 }
 
-.userSearch > input {
+.userSearch > form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.userSearch > form > input {
   width: 100%;
   outline: none;
   border: none;
@@ -23,7 +29,7 @@
   color: #fff;
 }
 
-.userSearch > button {
+.userSearch > form > button {
   color: #fff;
   border: none;
   outline: none;
@@ -36,7 +42,7 @@
   text-align: center;
 }
 
-.userSearch > input::placeholder {
+.userSearch > form > input::placeholder {
   color: #fff;
 }
 
