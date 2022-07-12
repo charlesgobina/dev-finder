@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 import './SearchUsername.css';
 
-const SearchUsername = () => {
+const SearchUsername = ({ setUsername }) => {
   const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    const searchQuery = async () => {
+      if (search) {
+        const queryInfo = await fetch(`https://api.github.com/users/${search}`);
+        const queryInfoResolve = await queryInfo.json();
+        if (queryInfoResolve && queryInfoResolve.login === search) {
+          setUsername(queryInfoResolve);
+        }
+      }
+    };
+    searchQuery();
+  }, []);
 
   return (
     <section className="searchBarContainer">
@@ -16,6 +30,10 @@ const SearchUsername = () => {
       </div>
     </section>
   );
+};
+
+SearchUsername.propTypes = {
+  setUsername: PropTypes.func.isRequired,
 };
 
 export default SearchUsername;
