@@ -5,7 +5,7 @@ import UserInfo from '../components/UserInfo/UserInfo';
 import './Finder.css';
 
 const Finder = () => {
-  const [username, setUsername] = useState([]);
+  const [username, setUsername] = useState();
   return (
     <main className="devFinder">
       <TitleBar />
@@ -14,7 +14,7 @@ const Finder = () => {
         setUsername={setUsername}
         className="searchUsername"
       />
-      <UserInfo />
+      <UserInfo user={username} />
       <div>Finder</div>
     </main>
   );
