@@ -11,13 +11,13 @@ const SearchUsername = ({ setUsername }) => {
       if (search) {
         const queryInfo = await fetch(`https://api.github.com/users/${search}`);
         const queryInfoResolve = await queryInfo.json();
-        if (queryInfoResolve && queryInfoResolve.login === search) {
+        if (queryInfoResolve.login && queryInfoResolve.login === search) {
           setUsername(queryInfoResolve);
         }
       }
     };
     searchQuery();
-  }, []);
+  }, [search]);
 
   return (
     <section className="searchBarContainer">
