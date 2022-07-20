@@ -24,6 +24,10 @@
   text-align: left;
 }
 
+.userGeneralInfo > .userParticularInfo > .userDescription > p {
+  width: 100%;
+}
+
 .userParticularInfo > .userPersonalInfo {
   display: flex;
   justify-content: center;
