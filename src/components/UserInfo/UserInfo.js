@@ -19,8 +19,7 @@ const UserInfo = ({ user }) => (
                   { user.login }
                 </p>
                 <p className="userJoinDate">
-                  Joined
-                  { user.created_at }
+                  { `Joined ${user.created_at.slice(0, 10)}` }
                 </p>
               </div>
             </div>
@@ -30,15 +29,19 @@ const UserInfo = ({ user }) => (
               </p>
             </div>
           </div>
-          <UserFollowers className="userFollowers" />
+          <UserFollowers user={user} className="userFollowers" />
           <div className="userSocials">
             <div className="userLocation">
               <i className="bx bx-current-location" />
-              <p>{ user.location }</p>
+              <p>
+                { user.location ? user.location : 'Not Available' }
+              </p>
             </div>
             <div className="userBlog">
               <i className="bx bx-link" />
-              <p>{ user.blog }</p>
+              <p>
+                { user.blog ? user.blog : 'Not Available' }
+              </p>
             </div>
             <div className="userTwitter">
               <i className="bx bxl-twitter" />

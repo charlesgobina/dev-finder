@@ -1,31 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 import './SearchUsername.css';
 
-const SearchUsername = ({ setUsername }) => {
+const SearchUsername = ({ setUsername, setLoading, setStatus }) => {
   const [search, setSearch] = useState('');
 
-  useEffect(() => {
-    const searchQuery = async () => {
-      if (search) {
-        const queryInfo = await fetch(`https://api.github.com/users/${search}`);
-        const queryInfoResolve = await queryInfo.json();
-        if (queryInfoResolve.login && queryInfoResolve.login === search) {
-          setUsername(queryInfoResolve);
-        }
+  const searchQuery = async () => {
+    if (search) {
+      setLoading(true);
+      const queryInfo = await fetch(`https://api.github.com/users/${search}`);
+      setStatus(queryInfo.status);
+      const queryInfoResolve = await queryInfo.json();
+      if (queryInfoResolve.login && queryInfoResolve.login === search) {
+        setLoading(false);
+        setUsername(queryInfoResolve);
+        setSearch('');
       }
-    };
+    }
+  };
+
+  const handleUserSearch = () => {
     searchQuery();
-  }, [search]);
+  };
 
   return (
     <section className="searchBarContainer">
       <div className="userSearch">
         <BiSearch className="searchIcon" />
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} placeholder="Search GitHub username..." />
-          <button type="submit">Search</button>
+          <button onClick={handleUserSearch} type="submit">Search</button>
         </form>
       </div>
     </section>
@@ -34,6 +39,8 @@ const SearchUsername = ({ setUsername }) => {
 
 SearchUsername.propTypes = {
   setUsername: PropTypes.func.isRequired,
+  setLoading: PropTypes.func.isRequired,
+  setStatus: PropTypes.func.isRequired,
 };
 
 export default SearchUsername;
