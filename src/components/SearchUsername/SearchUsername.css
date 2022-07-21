@@ -50,3 +50,9 @@
   font-size: 1.5em;
   color: #2276e7;
 }
+
+@media screen and (min-width: 768px) {
+  .searchBarContainer {
+    padding: 10px 100px;
+  }
+}

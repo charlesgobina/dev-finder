@@ -66,3 +66,27 @@
   align-items: center;
   gap: 5px;
 }
+
+@media screen and (min-width: 568px) {
+  .userParticularInfo > .userPersonalInfo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .userInfoWrapper {
+    padding: 10px 100px;
+  }
+
+  .userParticularInfo > .userPersonalInfo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+}
