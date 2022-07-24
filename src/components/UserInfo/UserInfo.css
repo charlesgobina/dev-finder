@@ -67,6 +67,12 @@
   gap: 5px;
 }
 
+@media screen and (min-width: 430px) {
+  .userInfoWrapper {
+    padding: 10px 40px;
+  }
+}
+
 @media screen and (min-width: 568px) {
   .userParticularInfo > .userPersonalInfo {
     display: flex;
