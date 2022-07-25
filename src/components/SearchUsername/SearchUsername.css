@@ -27,6 +27,7 @@
   font-size: 1.1em;
   background: #1f2a48;
   color: #fff;
+  justify-self: flex-start;
 }
 
 .userSearch > form > button {
@@ -55,10 +56,30 @@
   .searchBarContainer {
     padding: 10px 38px;
   }
+
+  .userSearch {
+    display: grid;
+    grid-template-columns: 7% 93%;
+    align-items: center;
+    width: 100%;
+    padding: 15px 10px;
+    background: #1f2a48;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .userSearch {
+    display: grid;
+    grid-template-columns: 6% 94%;
+    align-items: center;
+    width: 100%;
+    padding: 15px 10px;
+    background: #1f2a48;
+    border-radius: 10px;
+  }
+
   .searchBarContainer {
-    padding: 10px 100px;
+    padding: 10px 150px;
   }
 }
