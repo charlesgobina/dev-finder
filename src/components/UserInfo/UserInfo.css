@@ -46,6 +46,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
 }
 
 .userParticularInfo > .userPersonalInfo > .userNameInfo > .userHandle {
@@ -83,6 +84,12 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .userDescription {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .userInfoWrapper {
     padding: 10px 150px;
@@ -94,5 +101,63 @@
     align-items: center;
     gap: 40px;
     width: 100%;
+  }
+
+  .userParticularInfo > .userPersonalInfo {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .userDescriptionUno {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .userParticularInfo > .userPersonalInfo > img {
+    align-self: flex-start;
+  }
+
+  .userInfoWrapper {
+    padding: 10px 200px;
+  }
+
+  .userParticularInfo > .userPersonalInfo {
+    padding: 10px 0;
+  }
+
+  .userJoinDate {
+    align-self: flex-end;
+  }
+
+  .userPersonalInfoText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .userPersonalInfoTextName {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .userDescriptionUno {
+    display: none;
+  }
+
+  .userDescription {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .userInfoWrapper {
+    padding: 10px 350px;
   }
 }

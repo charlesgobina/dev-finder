@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './UserInfo.css';
-import octocat from '../../assets/images/octocat.png';
 import UserFollowers from '../UserFollowers/UserFollowers';
 
 const UserInfo = ({ user }) => (
@@ -12,20 +11,31 @@ const UserInfo = ({ user }) => (
           <div className="userParticularInfo">
             <div className="userPersonalInfo">
               <img src={user.avatar_url} alt="octocat" />
-              <div className="userNameInfo">
-                <p className="userName">{ user.name }</p>
-                <p className="userHandle">
-                  @
-                  { user.login }
-                </p>
-                <p className="userJoinDate">
-                  { `Joined ${user.created_at.slice(0, 10)}` }
-                </p>
+              <div className="userPersonalInfoText">
+                <div className="userPersonalInfoTextName">
+                  <div className="userNameInfo">
+                    <p className="userName">{ user.name }</p>
+                    <p className="userHandle">
+                      @
+                      { user.login }
+                    </p>
+                  </div>
+                  <div className="userDateInfo">
+                    <p className="userJoinDate">
+                      { `Joined ${user.created_at.slice(0, 10)}` }
+                    </p>
+                  </div>
+                </div>
+                <div className="userDescription">
+                  <p>
+                    { user.bio ? user.bio : 'No bio available' }
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="userDescription">
+            <div className="userDescriptionUno">
               <p>
-                { user.bio }
+                { user.bio ? user.bio : 'No bio available' }
               </p>
             </div>
           </div>
@@ -56,44 +66,10 @@ const UserInfo = ({ user }) => (
       </section>
     ) : (
       <section className="userInfoWrapper">
-        <div className="userGeneralInfo">
-          <div className="userParticularInfo">
-            <div className="userPersonalInfo">
-              <img src={octocat} alt="octocat" />
-              <div className="userNameInfo">
-                <p className="userName">The Octocat</p>
-                <p className="userHandle">@octocat</p>
-                <p className="userJoinDate">Joined 25 Jan 2011</p>
-              </div>
-            </div>
-            <div className="userDescription">
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus.
-              </p>
-            </div>
-          </div>
-          <UserFollowers className="userFollowers" />
-          <div className="userSocials">
-            <div className="userLocation">
-              <i className="bx bx-current-location" />
-              <p>San Francisco</p>
-            </div>
-            <div className="userBlog">
-              <i className="bx bx-link" />
-              <p>https://github.blog</p>
-            </div>
-            <div className="userTwitter">
-              <i className="bx bxl-twitter" />
-              <p>Not Available</p>
-            </div>
-            <div className="userOrg">
-              <i className="bx bx-buildings" />
-              <p>@github</p>
-            </div>
-          </div>
+        <div className="userDescription">
+          <p>
+            We encountered an error
+          </p>
         </div>
       </section>
     )}

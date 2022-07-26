@@ -38,6 +38,18 @@
 
 @media screen and (min-width: 768px) {
   .titleBar {
-    padding: 10px 150px !important;
+    padding: 10px 150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .titleBar {
+    padding: 10px 200px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .titleBar {
+    padding: 10px 350px;
   }
 }
