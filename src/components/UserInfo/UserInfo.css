@@ -103,14 +103,6 @@
     width: 100%;
   }
 
-  .userParticularInfo > .userPersonalInfo {
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-  }
-
   .userDescriptionUno {
     display: block;
   }
