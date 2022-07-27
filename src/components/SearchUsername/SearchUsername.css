@@ -95,3 +95,9 @@
     padding: 10px 350px;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .searchBarContainer {
+    padding: 10px 500px;
+  }
+}

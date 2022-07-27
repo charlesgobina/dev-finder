@@ -3,11 +3,29 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #141c2f;
+  background-color: hsl(222, 40%, 13%);
   color: #fff;
   gap: 20px;
 }
 
 .searchUsername {
   padding: 0 30px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    transform: translate(0, 10%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    transform: translate(0, 15%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    transform: translate(0, 20%);
+  }
 }

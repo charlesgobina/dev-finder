@@ -38,6 +38,7 @@ const UserInfo = ({ user }) => (
                 { user.bio ? user.bio : 'No bio available' }
               </p>
             </div>
+            <div className="userFollowers" />
           </div>
           <UserFollowers user={user} className="userFollowers" />
           <div className="userSocials">
