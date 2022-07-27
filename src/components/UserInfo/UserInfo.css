@@ -146,10 +146,49 @@
   .userDescription {
     display: block;
   }
+
+  .userGeneralInfo > .userSocials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .userLocation,
+  .userBlog,
+  .userTwitter,
+  .userOrg {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .userInfoWrapper {
     padding: 10px 350px;
+  }
+
+  .userGeneralInfo > .userSocials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .userLocation,
+  .userBlog,
+  .userTwitter,
+  .userOrg {
+    display: flex;
+    padding: 10px 0;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .userInfoWrapper {
+    padding: 10px 500px;
   }
 }
