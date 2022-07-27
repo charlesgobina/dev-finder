@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 import './SearchUsername.css';
 
 const SearchUsername = ({ setUsername, setLoading, setStatus }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('octocat');
 
   const searchQuery = async () => {
+    if (search && search === 'octocat') {
+      setLoading(true);
+      const queryInfo = await fetch(`https://api.github.com/users/${search}`);
+      setStatus(queryInfo.status);
+      const queryInfoResolve = await queryInfo.json();
+      if (queryInfoResolve.login && queryInfoResolve.login === search) {
+        setLoading(false);
+        setUsername(queryInfoResolve);
+        setSearch('');
+      }
+    }
     if (search) {
       setLoading(true);
       const queryInfo = await fetch(`https://api.github.com/users/${search}`);
@@ -23,6 +34,10 @@ const SearchUsername = ({ setUsername, setLoading, setStatus }) => {
   const handleUserSearch = () => {
     searchQuery();
   };
+
+  useEffect(() => {
+    searchQuery();
+  }, []);
 
   return (
     <section className="searchBarContainer">
