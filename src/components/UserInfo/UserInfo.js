@@ -14,7 +14,7 @@ const UserInfo = ({ user }) => (
               <div className="userPersonalInfoText">
                 <div className="userPersonalInfoTextName">
                   <div className="userNameInfo">
-                    <p className="userName">{ user.name }</p>
+                    <h1 className="userName">{ user.name }</h1>
                     <p className="userHandle">
                       @
                       { user.login }
@@ -40,28 +40,36 @@ const UserInfo = ({ user }) => (
             </div>
             <div className="userFollowers" />
           </div>
-          <UserFollowers user={user} className="userFollowers" />
-          <div className="userSocials">
-            <div className="userLocation">
-              <i className="bx bx-current-location" />
-              <p>
-                { user.location ? user.location : 'Not Available' }
-              </p>
+          <div className="userInfoFollowWrapper">
+            <div className="spacer">
+              <img src={user.avatar_url} alt="octocat" />
             </div>
-            <div className="userBlog">
-              <i className="bx bx-link" />
-              <p>
-                { user.blog ? user.blog : 'Not Available' }
-              </p>
+            <div className="userInfoFollow">
+              <UserFollowers user={user} className="userFollowers" />
+              <div className="userSocials">
+                <div className="userLocation">
+                  <i className="bx bx-current-location" />
+                  <p>
+                    { user.location ? user.location : 'Not Available' }
+                  </p>
+                </div>
+                <div className="userBlog">
+                  <i className="bx bx-link" />
+                  <p>
+                    { user.blog ? user.blog : 'Not Available' }
+                  </p>
+                </div>
+                <div className="userTwitter">
+                  <i className="bx bxl-twitter" />
+                  <p>{ user.twitter_username ? user.twitter_username : 'Not Available' }</p>
+                </div>
+                <div className="userOrg">
+                  <i className="bx bx-buildings" />
+                  <p>{ user.company ? user.company : 'Not Available' }</p>
+                </div>
+              </div>
             </div>
-            <div className="userTwitter">
-              <i className="bx bxl-twitter" />
-              <p>{ user.twitter_username ? user.twitter_username : 'Not Available' }</p>
-            </div>
-            <div className="userOrg">
-              <i className="bx bx-buildings" />
-              <p>{ user.company ? user.company : 'Not Available' }</p>
-            </div>
+
           </div>
         </div>
       </section>
