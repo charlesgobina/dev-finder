@@ -3,6 +3,7 @@ import TitleBar from '../components/TitleBar/TitleBar';
 import SearchUsername from '../components/SearchUsername/SearchUsername';
 import UserInfo from '../components/UserInfo/UserInfo';
 import NotFound from '../components/404/404';
+import Footer from '../components/Footer/Footer';
 import './Finder.css';
 
 const Finder = () => {
@@ -23,7 +24,7 @@ const Finder = () => {
           loading && status === 200 ? 'Data is Loading' : !loading && status === 200 ? <UserInfo user={username} /> : <NotFound />
         }
       </>
-      <div>Finder</div>
+      <Footer />
     </main>
   );
 };
