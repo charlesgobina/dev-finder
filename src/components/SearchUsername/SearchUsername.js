@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 import './SearchUsername.css';
 
-const SearchUsername = ({ setUsername, setLoading, setStatus }) => {
+const SearchUsername = ({
+  setUsername, setLoading, setStatus,
+}) => {
   const [search, setSearch] = useState('octocat');
 
   const searchQuery = async () => {

@@ -45,7 +45,7 @@ const UserInfo = ({ user }) => (
               <img src={user.avatar_url} alt="octocat" />
             </div>
             <div className="userInfoFollow">
-              <UserFollowers user={user} className="userFollowers" />
+              <UserFollowers user={user || undefined} className="userFollowers" />
               <div className="userSocials">
                 <div className="userLocation">
                   <i className="bx bx-current-location" />

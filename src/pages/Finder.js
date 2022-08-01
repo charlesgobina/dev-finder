@@ -7,12 +7,17 @@ import Footer from '../components/Footer/Footer';
 import './Finder.css';
 
 const Finder = () => {
-  const [username, setUsername] = useState(null);
+  const [lightMode, setLightMode] = useState(false);
+  const [username, setUsername] = useState();
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(200);
+
   return (
     <main className="devFinder">
-      <TitleBar />
+      <TitleBar
+        setLightMode={setLightMode}
+        lightMode={lightMode}
+      />
       <SearchUsername
         setUsername={setUsername}
         setLoading={setLoading}
@@ -21,7 +26,7 @@ const Finder = () => {
       />
       <>
         {
-          loading && status === 200 ? 'Data is Loading' : !loading && status === 200 ? <UserInfo user={username} /> : <NotFound />
+          loading && status === 200 ? 'Data is Loading' : !loading && status === 200 ? <UserInfo user={username || undefined} /> : <NotFound />
         }
       </>
       <Footer />

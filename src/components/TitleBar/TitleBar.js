@@ -1,25 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { BiSun, BiMoon } from 'react-icons/bi';
 import './TitleBar.css';
 
-const TitleBar = () => {
-  const [light, setLight] = useState(true);
-
+const TitleBar = ({ setLightMode, lightMode }) => {
   const handleClick = () => {
-    setLight((prev) => !prev);
+    setLightMode((prev) => !prev);
   };
 
   return (
     <div className="titleBar">
       <h1>devfinder</h1>
       <div className="themeSwitch">
-        <p>{ light ? 'light' : 'dark' }</p>
+        <p>{ lightMode ? 'light' : 'dark' }</p>
         <button onClick={handleClick} type="button">
-          { light ? <BiSun size={25} /> : <BiMoon size={25} /> }
+          { lightMode ? <BiSun size={25} /> : <BiMoon size={25} /> }
         </button>
       </div>
     </div>
   );
+};
+
+TitleBar.propTypes = {
+  setLightMode: PropTypes.func.isRequired,
+  lightMode: PropTypes.bool.isRequired,
 };
 
 export default TitleBar;
