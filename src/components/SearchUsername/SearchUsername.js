@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 import './SearchUsername.css';
 
-const SearchUsername = ({ setUsername, setLoading, setStatus }) => {
+const SearchUsername = ({
+  setUsername, setLoading, setStatus, lightMode,
+}) => {
   const [search, setSearch] = useState('octocat');
 
   const searchQuery = async () => {
@@ -39,8 +41,21 @@ const SearchUsername = ({ setUsername, setLoading, setStatus }) => {
     searchQuery();
   }, []);
 
+  const light = {};
+  const lightBox = {};
+
+  if (lightMode) {
+    light.backgroundColor = '#fff';
+    light.color = '#000';
+  }
+
+  if (lightMode) {
+    lightBox.backgroundColor = '#d3d3d3';
+    lightBox.color = '#000';
+  }
+
   return (
-    <section className="searchBarContainer">
+    <section className="searchBarContainer" style={[light, lightBox]}>
       <div className="userSearch">
         <BiSearch className="searchIcon" />
         <form onSubmit={(e) => e.preventDefault()}>
@@ -56,6 +71,7 @@ SearchUsername.propTypes = {
   setUsername: PropTypes.func.isRequired,
   setLoading: PropTypes.func.isRequired,
   setStatus: PropTypes.func.isRequired,
+  lightMode: PropTypes.bool.isRequired,
 };
 
 export default SearchUsername;
