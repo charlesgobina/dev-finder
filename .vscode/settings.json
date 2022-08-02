@@ -1,0 +1,13 @@
+{
+  "powermode.enabled": true,
+  "powermode.presets": "flames",
+  "powermode.shake.enabled": false,
+  "powermode.combo.counterEnabled": "default",
+  "powermode.explosions.enabled": true,
+  "powermode.explosions.duration": 100,
+  "powermode.explosions.frequency": 1,
+  "powermode.explosions.gifMode": "continue",
+  "powermode.explosions.maxExplosions": 3,
+  "powermode.explosions.size": 8,
+  "powermode.explosions.offset": 0.9
+}

@@ -12,13 +12,27 @@ const Finder = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(200);
 
+  const light = {};
+  const lightBox = {};
+
+  if (lightMode) {
+    light.backgroundColor = '#fff';
+    light.color = '#000';
+  }
+
+  if (lightMode) {
+    lightBox.backgroundColor = '#d3d3d3';
+    lightBox.color = '#000';
+  }
+
   return (
-    <main className="devFinder">
+    <main className="devFinder" style={light}>
       <TitleBar
         setLightMode={setLightMode}
         lightMode={lightMode}
       />
       <SearchUsername
+        lightMode={lightMode}
         setUsername={setUsername}
         setLoading={setLoading}
         setStatus={setStatus}
