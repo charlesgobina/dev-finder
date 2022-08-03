@@ -55,11 +55,11 @@ const SearchUsername = ({
   }
 
   return (
-    <section className="searchBarContainer" style={[light, lightBox]}>
+    <section className="searchBarContainer" style={light}>
       <div className="userSearch">
         <BiSearch className="searchIcon" />
-        <form onSubmit={(e) => e.preventDefault()}>
-          <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} placeholder="Search GitHub username..." />
+        <form onSubmit={(e) => e.preventDefault()} style={light}>
+          <input type="text" onChange={(e) => setSearch(e.target.value)} style={light} value={search} placeholder="Search GitHub username..." />
           <button onClick={handleUserSearch} type="submit">Search</button>
         </form>
       </div>
