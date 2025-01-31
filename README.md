@@ -5,7 +5,7 @@
 This project is a React application that allows users to search for GitHub usernames and retrieve user information. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Live Demo
-![Demo Link](/)
+![Demo Link](https://courageous-pithivier-9b32ff.netlify.app/)
 
 
 ## Screenshots
